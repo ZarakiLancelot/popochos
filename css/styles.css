@@ -5,13 +5,16 @@
   font-style: normal;
 }
 
-
 body {
   background-color: #f8f8f8;
   font-family: 'RegularBrush', sans-serif;
   font-size: x-large;
   margin: 0;
   padding: 0;
+}
+
+.fallback-font {
+  font-family: sans-serif;
 }
 
 header {
@@ -94,6 +97,32 @@ main {
   z-index: 0;
 }
 
+/* Estilos para la sección 'Sobre Nosotros' */
+#sobre-nosotros {
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  max-width: 1000px;
+  margin: 20px auto;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding-bottom: 5%;
+  margin-bottom: 10px;
+}
+
+#sobre-nosotros h2 {
+  color: #ff6f61;
+}
+
+#sobre-nosotros p {
+  line-height: 1.6;
+  margin: 10px 0;
+}
+
+#sobre-nosotros h3 {
+  margin-top: 20px;
+  color: #333;
+}
+
 footer {
   background-color: #333;
   color: white;
@@ -121,6 +150,11 @@ footer {
   .carrusel {
     padding-bottom: 75%; /* Relación de aspecto 4:3 */
   }
+
+  #sobre-nosotros {
+    padding: 20px;
+    margin: 20px 10px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -142,5 +176,10 @@ footer {
 
   .carrusel {
     padding-bottom: 100%; /* Relación de aspecto 4:3 */
+  }
+
+  #sobre-nosotros {
+    padding: 15px;
+    margin: 10px;
   }
 }
