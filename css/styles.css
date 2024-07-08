@@ -187,6 +187,25 @@ footer {
   bottom: 0;
 }
 
+footer .social-media {
+  margin-top: 10px;
+}
+
+footer .social-media a {
+  margin: 0 5px;
+  display: inline-block;
+}
+
+footer .social-media img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s;
+}
+
+footer .social-media img:hover {
+  transform: scale(1.1);
+}
+
 /* Responsividad */
 @media (max-width: 768px) {
   body {
@@ -259,5 +278,10 @@ footer {
 
   form button {
     font-size: medium;
+  }
+
+  footer .social-media img {
+    width: 25px;
+    height: 25px;
   }
 }
