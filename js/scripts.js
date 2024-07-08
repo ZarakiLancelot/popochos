@@ -35,3 +35,32 @@ document.addEventListener('DOMContentLoaded', () => {
     mostrarSlide();
   });
 });
+
+document.getElementById('form-contacto').addEventListener('submit', function(event) {
+  (function(){
+    emailjs.init("eqN-WWRrQCR82RV2E"); // Reemplaza con tu User ID de EmailJS
+  })();
+
+  event.preventDefault(); // Evita el envío del formulario por defecto
+
+  // Validación del formulario
+  const nombre = document.getElementById('nombre').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const mensaje = document.getElementById('mensaje').value.trim();
+
+  if (nombre === "" || email === "" || mensaje === "") {
+    alert("Por favor, completa todos los campos.");
+    return;
+  }
+
+  // Envío del formulario usando EmailJS
+  emailjs.sendForm('contact_service', 'contact_form', this)
+    .then(function(response) {
+      console.log('SUCCESS!', response.status, response.text);
+      alert('Mensaje enviado con éxito!');
+      document.getElementById('form-contacto').reset(); // Limpia el formulario después de enviarlo
+    }, function(error) {
+      console.log('FAILED...', error);
+      alert('Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo.');
+    });
+});
