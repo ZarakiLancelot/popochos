@@ -88,6 +88,7 @@ main {
 .hero-image img {
   max-width: 100%;
   padding-right: 50px;
+  animation: scaleUp 0.5s ease-in-out forwards;
 }
 
 .hero-decorations {
@@ -105,12 +106,23 @@ main {
 
 .cloud {
   top: -250px;
-  left: 5px;
+  left: 0;
+  animation: scaleUp 0.5s ease-in-out forwards;
 }
 
 .flower {
   bottom: 20px;
   right: 50px;
+  animation: scaleUp 0.5s ease-in-out forwards;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 /* Estilos generales para la sección de productos */
@@ -305,6 +317,11 @@ footer .social-media img:hover {
     max-width: 100%;
   }
 
+  .cloud {
+    top: -275px;
+    left: 0;
+  }
+
   #productos {
     padding: 20px;
     margin: 20px 10px;
@@ -381,8 +398,8 @@ footer .social-media img:hover {
   }
   
   .cloud {
-    top: -250px;
-    left: 5px;
+    top: -275px;
+    left: 0;
   }
 
   #productos {
